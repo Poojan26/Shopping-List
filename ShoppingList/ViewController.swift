@@ -11,6 +11,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // Textview outlets declaration
+    
+    @IBOutlet weak var TextviewShoplist: UITextField!
+    @IBOutlet weak var TextviewItem1: UITextField!
+    @IBOutlet weak var TextviewItem2: UITextField!
+    @IBOutlet weak var TextviewItem3: UITextField!
+    @IBOutlet weak var TextviewItem4: UITextField!
+    @IBOutlet weak var TextviewItem5: UITextField!
+    
     // Stepper Outlets
     
     @IBOutlet weak var MyStepper1: UIStepper!
@@ -41,6 +50,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
     }
     
@@ -85,6 +95,45 @@ class ViewController: UIViewController {
         MyStepper3.value = 0
         MyStepper4.value = 0
         MyStepper5.value = 0
+    }
+    
+    // Save button action
+    
+    @IBAction func OnSaveClick(_ sender: UIButton) {
+        
+        // Assigning user defaults to the user value on button click
+        UserDefaults.standard.set(TextviewShoplist.text,forKey: "Shoplist")
+        UserDefaults.standard.set(TextviewItem1.text,forKey: "Item1")
+        UserDefaults.standard.set(TextviewItem2.text,forKey: "Item2")
+        UserDefaults.standard.set(TextviewItem3.text,forKey: "Item3")
+        UserDefaults.standard.set(TextviewItem4.text,forKey: "Item4")
+        UserDefaults.standard.set(TextviewItem5.text,forKey: "Item5")
+        
+        // Quantity values
+        UserDefaults.standard.set(StepperLabel1.text,forKey: "Q1")
+        UserDefaults.standard.set(StepperLabel2.text,forKey: "Q2")
+        UserDefaults.standard.set(StepperLabel3.text,forKey: "Q3")
+        UserDefaults.standard.set(StepperLabel4.text,forKey: "Q4")
+        UserDefaults.standard.set(StepperLabel5.text,forKey: "Q5")
+        
+    }
+    @IBAction func RetriveButton(_ sender: UIButton) {
+        
+        // Shopping item values
+        TextviewShoplist.text = UserDefaults.standard.object(forKey: "Shoplist") as? String
+        TextviewItem1.text = UserDefaults.standard.object(forKey: "Item1") as? String
+        TextviewItem2.text = UserDefaults.standard.object(forKey: "Item2") as? String
+        TextviewItem3.text = UserDefaults.standard.object(forKey: "Item3") as? String
+        TextviewItem4.text = UserDefaults.standard.object(forKey: "Item4") as? String
+        TextviewItem5.text = UserDefaults.standard.object(forKey: "Item5") as? String
+        
+        // Quantities
+        StepperLabel1.text = UserDefaults.standard.object(forKey: "Q1") as? String
+        StepperLabel2.text = UserDefaults.standard.object(forKey: "Q2") as? String
+        StepperLabel3.text = UserDefaults.standard.object(forKey: "Q3") as? String
+        StepperLabel4.text = UserDefaults.standard.object(forKey: "Q4") as? String
+        StepperLabel5.text = UserDefaults.standard.object(forKey: "Q5") as? String
+        
     }
 }
 

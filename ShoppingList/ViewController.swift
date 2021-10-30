@@ -95,6 +95,14 @@ class ViewController: UIViewController {
         MyStepper3.value = 0
         MyStepper4.value = 0
         MyStepper5.value = 0
+        
+        // Reset text values
+        TextviewShoplist.text = "My Shopping list"
+        TextviewItem1.text = ""
+        TextviewItem2.text = ""
+        TextviewItem3.text=""
+        TextviewItem4.text = ""
+        TextviewItem5.text = ""
     }
     
     // Save button action

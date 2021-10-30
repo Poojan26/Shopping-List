@@ -72,8 +72,19 @@ class ViewController: UIViewController {
     // Cancel button action
     @IBAction func OnCancelClick(_ sender: UIButton) {
         
-       
+        // Setting label texts to 0
+        StepperLabel1.text = "0"
+        StepperLabel2.text = "0"
+        StepperLabel3.text = "0"
+        StepperLabel4.text = "0"
+        StepperLabel5.text = "0"
         
+        // Setting stepper values to 0
+        MyStepper1.value = 0
+        MyStepper2.value = 0
+        MyStepper3.value = 0
+        MyStepper4.value = 0
+        MyStepper5.value = 0
     }
 }
 

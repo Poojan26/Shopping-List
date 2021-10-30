@@ -1,8 +1,10 @@
-//
+// Name: Poojan Patel
+// Student ID- 301228811
+// Course: MAPD 714
 //  AppDelegate.swift
 //  ShoppingList
 //
-//  Created by Jay on 10/30/21.
+//  Created by Poojan on 10/30/21.
 //
 
 import UIKit
